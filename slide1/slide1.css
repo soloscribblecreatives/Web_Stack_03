@@ -13,7 +13,7 @@
 .video1 {
 	position: absolute;
 	width: 1024px;
-	height: 768px;
+	height: 670px;
 	z-index:5;
 }
 
@@ -21,31 +21,23 @@
 	position: absolute;
 	width: 1024px;
 	height: 768px;
-	z-index: 50;
+	z-index: 999;
+}
+
+.button2 {
+	position: absolute;
+  left: 313px;
+  top: 256px;
+  width: 415px;
+  height: 313px;
+	display: none;
+	z-index: 999;
 }
 
 .video2 {
 	position: absolute;
 	width: 1024px;
-	height: 768px;
-	display: none;
-	z-index:10;
-}
-
-.button2 {
-	position: absolute;
-  left: 351px;
-  top: 640px;
-  width: 324px;
-  height: 97px;
-	display: none;
-	z-index: 100;
-}
-
-.video3 {
-	position: absolute;
-	width: 1024px;
-	height: 768px;
+	height: 670px;
 	display: none;
 	z-index:10;
 }
