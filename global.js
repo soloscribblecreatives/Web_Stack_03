@@ -349,7 +349,6 @@ switch(pg_id){
 	case 1:
 	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"></div><div class="button1" onclick="playVid1()"></div><div class="video1"><video autoplay onplay="myFunction()" poster="slide1/Poster.png" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="button2" onclick="playVid2()"></div><div class="video2"><video id="endVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div>';
 	break;
-
 }
 
 return content;
@@ -500,7 +499,7 @@ function myFunction() {
 	$('.button1').css("display","none");
 	setTimeout(function () {
 		$('.button2').css("display","block");
-	}, 6000);
+	}, 10000);
 };
 
 function playVid2() {
