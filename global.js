@@ -347,7 +347,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/BG.png" width="1024" height="768"></div><div class="video1"><video onended="loadCarol()" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="video2"><video id="endVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div><div class="wordWrap col-12"><div class="form"><form name="form1" action="#"><div class="form-group"><input type="text" class="form-control databox" id="myText" placeholder="Enter any text.." name="text1" value=""></div></form><button onclick="myFunction(document.form1.text1)" type="submit" class="form-control btn btn-success">Submit</button><button onclick="location.reload();" type="submit" class="form-control btn btn-danger">Reset</button></div></div><div id="display"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/BG.png" width="1024" height="768"></div><div class="video1"><video poster="slide1/Poster.png" onclick="playVideo()" onended="loadCarol()" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="video2"><video id="endVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div><div class="wordWrap col-12"><div class="form"><form name="form1" action="#"><div class="form-group"><input type="text" class="form-control databox" id="myText" placeholder="Enter any text.." name="text1" value=""></div></form><button onclick="myFunction(document.form1.text1)" type="submit" class="form-control btn btn-success">Submit</button><button onclick="location.reload();" type="submit" class="form-control btn btn-danger">Reset</button></div></div><div id="display"></div>';
 	break;
 
 }
@@ -492,16 +492,13 @@ $(document).ready(function(){
 
 /*--------------------------Javascript Animation-----------------------------*/
 
-function loadCarol() {
-	$("#display").css("display","none");
-	$(".video1").css("display","none");
-	var vid = document.getElementById("startVideo");
-	vid.pause();
-	vid.currentTime = 0;
-	$(".video2").css("display","block");
-	document.getElementById("endVideo").play();
-};
 
+function playVideo() {
+	document.getElementById("startVideo").play();
+	setTimeout(function(){
+		$("#display").stop(true).addClass("anime");
+	}, 500);
+};
 
 
 function myFunction(inputtxt)
@@ -511,13 +508,21 @@ function myFunction(inputtxt)
 		{
 			var x = document.getElementById("myText").value;
 			document.getElementById("display").innerHTML = x;
-			$("#display").stop(true).addClass("anime");
 			$("#myText").hide();
 			$('.video1').css("display","block");
-			document.getElementById("startVideo").play();
 		}	 
 		else
 		{
 			alert('Please input alphabet characters only');
 		}
-    }
+    };
+	
+function loadCarol() {
+	$("#display").css("display","none");
+	$(".video1").css("display","none");
+	var vid = document.getElementById("startVideo");
+	vid.pause();
+	vid.currentTime = 0;
+	$(".video2").css("display","block");
+	document.getElementById("endVideo").play();
+};
