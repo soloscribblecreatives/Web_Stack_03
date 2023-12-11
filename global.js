@@ -347,8 +347,9 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"></div><div class="button1" onclick="playVid1()"></div><div class="video1"><video autoplay onplay="myFunction()" poster="slide1/Poster.png" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="button2" onclick="playVid2()"></div><div class="video2"><video id="endVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/BG.png" width="1024" height="768"></div><div class="video1"><video onended="loadCarol()" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="video2"><video id="endVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div><div class="wordWrap col-12"><div class="form"><form name="form1" action="#"><div class="form-group"><input type="text" class="form-control databox" id="myText" placeholder="Enter any text.." name="text1" value=""></div></form><button onclick="myFunction(document.form1.text1)" type="submit" class="form-control btn btn-success">Submit</button><button onclick="location.reload();" type="submit" class="form-control btn btn-danger">Reset</button></div></div><div id="display"></div>';
 	break;
+
 }
 
 return content;
@@ -491,19 +492,8 @@ $(document).ready(function(){
 
 /*--------------------------Javascript Animation-----------------------------*/
 
-function playVid1() {
-	document.getElementById("startVideo").play();
-}
-
-function myFunction() {
-	$('.button1').css("display","none");
-	setTimeout(function () {
-		$('.button2').css("display","block");
-	}, 10000);
-};
-
-function playVid2() {
-	$('.button2').css("display","none");
+function loadCarol() {
+	$("#display").css("display","none");
 	$(".video1").css("display","none");
 	var vid = document.getElementById("startVideo");
 	vid.pause();
@@ -512,12 +502,22 @@ function playVid2() {
 	document.getElementById("endVideo").play();
 };
 
-/* 
-$(document).ready(function() {
-	var vid = document.getElementById("startVideo");
-    vid.addEventListener("timeupdate", function() {
-		if(vid.currentTime=5) {
-			$(".button").show();
+
+
+function myFunction(inputtxt)
+    { 
+		var letters = /^[0-9 a-z A-Z]+$/;
+		if(inputtxt.value.match(letters))
+		{
+			var x = document.getElementById("myText").value;
+			document.getElementById("display").innerHTML = x;
+			$("#display").stop(true).addClass("anime");
+			$("#myText").hide();
+			$('.video1').css("display","block");
+			document.getElementById("startVideo").play();
+		}	 
+		else
+		{
+			alert('Please input alphabet characters only');
 		}
-	});
-}); */
+    }
