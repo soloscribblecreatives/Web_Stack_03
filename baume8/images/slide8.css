@@ -1,0 +1,147 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.footer {
+	position: absolute;
+  left: 22px;
+  top: 735px;
+  width: 1036px;
+  height: 53px;
+	z-index: 25;
+}
+
+.s1 {
+	position: absolute;
+	width: 1080px;
+	height: 810px;
+	z-index: 1;
+}
+
+.s2 {
+	position: absolute;
+  left: 632px;
+  top: 0px;
+  width: 448px;
+  height: 810px;
+	animation: slideInRight 0.5s;
+	animation-delay: 0.1s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s3 {
+	position: absolute;
+  left: 163px;
+  top: 429px;
+  width: 218px;
+  height: 381px;
+	animation: slideInUp 0.5s;
+	animation-delay: 0.6s;
+	animation-fill-mode: both;
+	z-index: 10;
+}
+
+.s4 {
+	position: absolute;
+  left: 391px;
+  top: 518px;
+  width: 151px;
+  height: 292px;
+	animation: slideInUp 0.5s;
+	animation-delay: 0.8s;
+	animation-fill-mode: both;
+	z-index: 7;
+}
+
+.s5 {
+	position: absolute;
+  left: 33px;
+  top: 299px;
+  width: 295px;
+  height: 96px;
+	animation: zoomIn 0.7s;
+	animation-delay: 1.5s;
+	animation-fill-mode: both;
+	transform-origin: left;
+	z-index: 5;
+}
+
+.s6 {
+	position: absolute;
+  left: 371px;
+  top: 303px;
+  width: 282px;
+  height: 86px;
+	animation: zoomIn 0.7s;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+	transform-origin: left;
+	z-index: 15;
+}
+
+.s7 {
+	position: absolute;
+  left: 118px;
+  top: 500px;
+  width: 309px;
+  height: 116px;
+	animation: zoomIn 0.5s;
+	animation-delay: 1.9s;
+	animation-fill-mode: both;
+	z-index: 20;
+}
+
+
+@keyframes flashLong {
+  0%, 40%, 80%   {
+    opacity: 0;
+  }
+
+  20%, 60%, 100% {
+    opacity: 1;
+  }
+}
+
+
+@-webkit-keyframes fadeInDownSmall {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -25%, 0);
+    transform: translate3d(0, -25%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+
+@keyframes zoomInLight {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes fadeInDownSmall {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -25%, 0);
+    transform: translate3d(0, -25%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
