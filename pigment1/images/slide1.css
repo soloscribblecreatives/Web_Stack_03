@@ -1,0 +1,72 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.s1 {
+	position: absolute;
+	width: 1080px;
+	height: 810px;
+	z-index: 3;
+}
+
+.s2 {
+	position: absolute;
+  left: 634px;
+  top: 0px;
+  width: 446px;
+  height: 810px;
+	animation: slideInRight 0.5s;
+	animation-delay: 0.2s;
+	animation-fill-mode: both;
+	z-index: 1;
+}
+
+.s3 {
+	position: absolute;
+  left: 43px;
+  top: 46px;
+  width: 491px;
+  height: 93px;
+	animation: slideInLeft 0.5s;
+	animation-delay: 0.7s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s4 {
+	position: absolute;
+  left: 43px;
+  top: 158px;
+  width: 455px;
+  height: 83px;
+	animation: fadeInRight 0.5s;
+	animation-delay: 0.7s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s5 {
+	position: absolute;
+  left: 532px;
+  top: 292px;
+  width: 174px;
+  height: 43px;
+	animation: zoomIn 0.5s;
+	animation-delay: 1.7s;
+	animation-fill-mode: both;
+	transform-origin: right;
+	z-index: 5;
+}
+
+.s6 {
+	position: absolute;
+  left: 26px;
+  top: 709px;
+  width: 1027px;
+  height: 79px;
+	animation: none 0.5s;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
