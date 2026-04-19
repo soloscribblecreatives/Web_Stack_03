@@ -1,0 +1,164 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.s1 {
+	position: absolute;
+	width: 1080px;
+	height: 810px;
+	z-index: 1;
+}
+
+.s2 {
+  position: absolute;
+  left: 337px;
+  top: 33px;
+  width: 389px;
+  height: 79px;
+	animation: zoomIn 0.5s;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.s3 {
+	position: absolute;
+  left: 40px;
+  top: 146px;
+  width: 686px;
+  height: 571px;
+	animation: zoomIn 0.5s;
+	animation-delay: 0.5s;
+	animation-fill-mode: both;
+	transform-origin: top left;
+	z-index: 5;
+}
+
+.s4 {
+	position: absolute;
+  left: 580px;
+  top: 381px;
+  width: 179px;
+  height: 384px;
+	animation: zoomIn 0.5s;
+	animation-delay: 0.8s;
+	animation-fill-mode: both;
+	transform-origin: bottom;
+	z-index: 10;
+}
+
+.s5 {
+	position: absolute;
+  left: 863px;
+  top: 33px;
+  width: 161px;
+  height: 69px;
+	animation: rotateInUpRight 0.5s;
+	animation-delay: 1.3s;
+	animation-fill-mode: both;
+	transform-origin: right;
+	z-index: 5;
+}
+
+.s6 {
+	position: absolute;
+  left: 772px;
+  top: 177px;
+  width: 258px;
+  height: 140px;
+	animation: fadeInRight 0.5s;
+	animation-delay: 1.8s;
+	animation-fill-mode: both;
+	z-index: 10;
+}
+
+.s7 {
+	position: absolute;
+  left: 772px;
+  top: 391px;
+  width: 264px;
+  height: 240px;
+	animation: fadeInRight 0.5s;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+	z-index: 10;
+}
+
+@keyframes rotateInRight {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 200deg);
+    transform: rotate3d(0, 0, 1, 200deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes flashLongOn {
+  0%,  100% {
+    opacity: 0;
+  }
+
+  25%, 50%, 75% {
+    opacity: 1;
+  }
+}
+
+
+@-webkit-keyframes fadeInDownSmall {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -25%, 0);
+    transform: translate3d(0, -25%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+
+@keyframes zoomInLight {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes fadeInDownSmall {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -25%, 0);
+    transform: translate3d(0, -25%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes revealVerticalDown {
+  0% {
+    clip: rect(0px,600px,0px,0px);
+	opacity: 1;
+  }
+  
+  100% {
+    clip: rect(0px,600px,700px,0px);
+	opacity: 1;
+  }
+}
