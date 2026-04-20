@@ -114,5 +114,6 @@
   top: 679px;
   width: 191px;
   height: 71px;
+  display: none;
   z-index: 25;
 }
