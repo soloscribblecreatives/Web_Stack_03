@@ -1,0 +1,29 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.s1 {
+	position: absolute;
+	width: 1080px;
+	height: 810px;
+	z-index: 1;
+}
+
+.s2 {
+  position: absolute;
+  left: 268px;
+  top: 51px;
+  width: 544px;
+  height: 682px;
+	z-index: 10;
+}
+
+.home {
+  position: absolute;
+  left: 940px;
+  top: 0px;
+  width: 140px;
+  height: 140px;
+  z-index: 40;
+}
